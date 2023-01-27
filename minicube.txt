@@ -1,0 +1,109 @@
+install docker first
+
+sudo usermod -aG docker $USER && newgrp docker
+minicube start --driver=docker
+minikube kubectl -- get pods -A
+sudo snap install kubectl --classic
+kubectl get po -A
+
+
+docker push arun123ctk/arunrepository:tagname
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  218  mkdir kubproject
+  219  cd kubproject/
+  220  git clone https://github.com/kkiran98/todoappdev.git
+  221  ls
+  222  cd todoappdev/
+  223  ls
+  224  rm dockerfile
+  225  ls
+  226  rm docker-compose.yml
+  227  clear
+  228  vi Dockerfile
+  229  docker build -t todoapp:v1 .
+  230  docker images
+  231  clear
+  232  docker run -it -p 8000:8000 74875f19077c
+  233  clear
+  234  mkdir k8s
+  235  cd k8s/
+  236  cd ..
+  237  kubectl get pods -w
+  238  docker images
+  239  cd k8s/
+  240  docker images
+  241  docker build -t arunrepository/todoapp:v1 .
+  242  docker images
+  243  docker push arunrepository:v1
+  244  docker push todoapp:v1
+  245  docker tag myImage myusername/myimage:latest
+  246  docker tag myImage arun123ctk/74875f19077c:latest
+  247  clear
+  248  docker tag myImage arun123ctk/74875f19077c:latest
+  249  docker images
+  250  docker tag myImage arun123ctk/todoapp:latest
+  251  docker tag todoapp arun123ctk/todoapp:latest
+  252  cd ..
+  253  ls
+  254  docker build -t arunrepository/todoapp:v2 .
+  255  cd k8s/
+  256  docker images
+  257  docker push arunrepository/todoapp:v2
+  258  docker login -u arun123ctk -p devop98arun1
+  259  docker push arunrepository/todoapp:v2
+  260  clear
+  261  docker images
+  262  docker tag arunrepository/todoapp arun123ctk/arunrepository/todoapp
+  263  cd ..
+  264  docker build -t
+  265  docker ps
+  266  docker ps -a
+  267  clear
+  268  docker tag local-image:tagname new-repo:tagname
+  269  cd k8s/
+  270  docker images
+  271  docker tag arunrepository/todoapp:v2 arun123ctk:v2
+  272  docker push arunrepository/todoapp:v2
+  273  docker login -u arun123ctk -p devop98arun1
+  274  docker push arunrepository/todoapp:v2
+  275  docker images
+  276  clear
+  277  docker images
+  278  docker tag -t todoapp:v1 arun123ctk
+  279  /
+  280  docker tag -t todoapp:v1 arun123ctk arun123ctk/arunrepository:v4
+  281  docker tag todoapp:v1 arun123ctk arun123ctk/arunrepository:v4
+  282  docker tag todoapp:v1 arun123ctk/arunrepository:v4
+  283  docker images
+  284  docker push arun123ctk/arunrepository:v4
+  285  vim pod.yaml
+  286  docker images
+  287  vim pod.yaml
+  288  kubectl apply -f pod.yaml
